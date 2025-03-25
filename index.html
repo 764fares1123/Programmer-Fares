@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fares Hany | Creative Web Designer & Developer</title>
+    <style>
+        body {
+            background: #121212;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fe2c55;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 20px rgba(254, 44, 85, 0.4);
+        }
+        h1 {
+            color: #fe2c55;
+            margin: 15px 0 5px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .job-title {
+            color: #25f4ee;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .description {
+            color: #ddd;
+            margin: 25px 0;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .highlight {
+            color: #25f4ee;
+            font-weight: 600;
+        }
+        .contact-info {
+            background: rgba(255,255,255,0.08);
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .copy-btn {
+            background: rgba(37, 244, 238, 0.1);
+            color: #25f4ee;
+            border: 1px solid #25f4ee;
+            padding: 5px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .copy-btn:hover {
+            background: #25f4ee;
+            color: #121212;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .primary-btn {
+            background: linear-gradient(45deg, #fe2c55, #25f4ee);
+            color: white;
+            box-shadow: 0 4px 15px rgba(254, 44, 85, 0.3);
+        }
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(254, 44, 85, 0.4);
+        }
+        .tiktok-btn {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            border: 1px solid #fe2c55;
+        }
+        .tiktok-btn:hover {
+            background: #fe2c55;
+        }
+        .btn i {
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+        .social-links {
+            margin-top: 30px;
+        }
+        .social-links a {
+            color: #aaa;
+            margin: 0 12px;
+            font-size: 1.4rem;
+            transition: all 0.3s;
+        }
+        .social-links a:hover {
+            color: #25f4ee;
+            transform: scale(1.1);
+        }
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #25f4ee;
+            color: #121212;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            display: none;
+            z-index: 1000;
+            animation: fadeInOut 2.5s ease-in-out;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(-20px); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <img src="profile.jpg" alt="Fares Hany Profile Photo" class="profile-img">
+        <h1>Fares Hany</h1>
+        <p class="job-title">UI/UX Designer & Frontend Developer</p>
+        
+        <p class="description">
+            I create <span class="highlight">visually stunning</span> and <span class="highlight">highly functional</span> 
+            websites that deliver exceptional user experiences. With expertise in 
+            modern design principles and clean code, I transform ideas into 
+            digital realities that <span class="highlight">engage audiences</span> and <span class="highlight">drive results</span>.
+            <br><br>
+            Specializing in responsive design, performance optimization, and 
+            creative problem-solving to build web solutions that stand out.
+        </p>
+        
+        <div class="contact-info">
+            <div class="phone-number">
+                <i class="fas fa-phone-alt"></i>
+                <span id="phone">+20 155 212 7091</span>
+            </div>
+            <button class="copy-btn" id="copyBtn">
+                <i class="far fa-copy"></i> Copy
+            </button>
+        </div>
+        
+        <div class="btn-container">
+            <a href="#contact" class="btn primary-btn">
+                <i class="fas fa-paper-plane"></i> Hire Me
+            </a>
+            <a href="https://www.tiktok.com/@elgen_f1" class="btn tiktok-btn" target="_blank">
+                <i class="fab fa-tiktok"></i> My TikTok
+            </a>
+        </div>
+        
+        <div class="social-links">
+            <a href="#" title="Behance"><i class="fab fa-behance"></i></a>
+            <a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <div class="alert" id="alert">Phone number copied!</div>
+
+    <script>
+        const copyBtn = document.getElementById('copyBtn');
+        const phoneNumber = document.getElementById('phone');
+        const alert = document.getElementById('alert');
+
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(phoneNumber.innerText).then(() => {
+                // Show alert
+                alert.style.display = 'block';
+                
+                // Hide after animation completes
+                setTimeout(() => {
+                    alert.style.display = 'none';
+                }, 2500);
+                
+                // Change button text temporarily
+                copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    copyBtn.innerHTML = '<i class="far fa-copy"></i> Copy';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
